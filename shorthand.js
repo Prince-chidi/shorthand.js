@@ -187,8 +187,11 @@
         };
     });
 
-    // Attach shorthand functions to global namespace
+    // Attached shorthand functions to global namespace
     global.$$ = shorthand;
     global.sh = shorthand;
 
 })(window);
+
+
+//last worked on 13th august 2024
