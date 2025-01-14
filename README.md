@@ -52,3 +52,95 @@ sh.warn("This is a warning message");
 sh.err("This is an error message");
 
 
+
+3. Styling Elements
+   
+Apply a Single Style by ID:
+sh.style("myElementId", "color", "blue");
+
+Apply Multiple Styles by ID:
+sh.styles("myElementId", {
+    color: "blue",
+    backgroundColor: "lightgray",
+    fontSize: "16px"
+});
+
+Background Color:
+sh.bg("myElementId", "yellow");
+sh._bg("myClassName", "lightblue");
+
+Set Height and Width:
+sh.ht("myElementId", "100px");
+sh.wt("myElementId", "50%");
+
+Apply Multiple Styles to Elements by Class Name:
+sh._styles("myClassName", {
+    color: "red",
+    bgcl: "black",
+    fs: "14px"
+});
+
+
+4. Shorthand $ Methods
+Use $-prefixed shorthand methods globally or directly on HTMLElement objects:
+// Global usage
+$bg(document.getElementById("myElement"), "yellow");
+
+// Directly on HTMLElement
+document.getElementById("myElement").$bg("yellow");
+
+
+
+5. Shorthand Style Mapping
+Use abbreviations for common CSS properties:
+
+javascript
+Copy code
+sh.stylesMapping = {
+    bgcl: 'backgroundColor',
+    cl: 'color',
+    fs: 'fontSize',
+    bd: 'border',
+    h: 'height',
+    w: 'width',
+    pos: 'position'
+};
+
+
+
+Example
+<div id="example" style="width: 100px; height: 100px;"></div>
+<script src="shorthand.js"></script>
+<script>
+    // Set background color
+    sh.bg("example", "blue");
+
+    // Apply multiple styles
+    sh.styles("example", {
+        bgcl: "red",
+        h: "150px",
+        w: "150px"
+    });
+
+    // Log a message
+    sh.log("Styles applied successfully!");
+</script>
+
+
+Error Handling
+Every method includes robust error handling. For example, if you try to style a nonexistent element:
+
+sh.style("nonexistentId", "color", "red");
+// Error: Element with ID 'nonexistentId' not found
+
+
+Future Plans
+Add more utility methods for advanced DOM manipulation.
+Include comprehensive documentation and examples.
+Improve support for event handling and animations.
+
+
+License
+This library is in the development and testing phase. Full documentation, licensing, and policy information will be added in future updates.
+
+Contributions and feedback are welcome! Let me know how Shorthand.js can be improved to meet your development needs. 
