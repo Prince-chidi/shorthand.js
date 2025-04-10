@@ -64,9 +64,9 @@ sh.style("myElementId", "color", "blue");
 
 ```javascript
 sh.styles("myElementId", {
-  color: "blue",
-  backgroundColor: "lightgray",
-  fontSize: "16px"
+  cl: "blue",
+  bg: "lightgray",
+  fs: "16px"
 });
 ```
 
@@ -80,15 +80,15 @@ sh._bg("myClassName", "lightblue");
 #### 📏 Set Height and Width
 
 ```javascript
-sh.ht("myElementId", "100px");
-sh.wt("myElementId", "50%");
+sh.h("myElementId", "100px");
+sh.w("myElementId", "50%");
 ```
 
 #### 💼 Apply Multiple Styles to Class
 
 ```javascript
 sh._styles("myClassName", {
-  color: "red",
+  cl: "red",
   bgcl: "black",
   fs: "14px"
 });
@@ -109,20 +109,16 @@ document.getElementById("myElement").$bg("yellow");
 ```
 
 ---
-
-### 🧩 Style Mapping (Abbreviations)
-
-```javascript
-sh.stylesMapping = {
-  bgcl: 'backgroundColor',
-  cl: 'color',
-  fs: 'fontSize',
-  bd: 'border',
-  h: 'height',
-  w: 'width',
-  pos: 'position'
-};
-```
+### Shorthand Mappings 🔤
+| Shortcut | Maps to          |
+|----------|------------------|
+| `bg`     | backgroundColor  |
+| `cl`     | color            |
+| `fs`     | fontSize         |
+| `bd`     | border           |
+| `h`      | height           |
+| `w`      | width            |
+| `pos`    | position         |
 
 ---
 
@@ -137,7 +133,7 @@ sh.stylesMapping = {
 
   // Apply multiple styles
   sh.styles("example", {
-    bgcl: "red",
+    bg: "red",
     h: "150px",
     w: "150px"
   });
