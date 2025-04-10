@@ -86,13 +86,7 @@ sh.wt('elementId', '50%');    // Set width
 </script>
 ```
 
-## Error Handling ⚠️
-```javascript
-try {
-    sh.style('missingElement', 'color', 'red');
-} catch (error) {
-    console.error(`🚨 Error: ${error.message}`);
-}
+
 ```
 
 ## Roadmap 🗺️
@@ -118,5 +112,3 @@ npm run build
 ## License 📄
 MIT License | *Currently in active development*
 ```
-
-
