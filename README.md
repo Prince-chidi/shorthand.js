@@ -68,8 +68,8 @@ sh.wt('elementId', '50%');    // Set width
 
 <script>
     // Set dimensions
-    sh.ht('demo', '200px');
-    sh.wt('demo', '300px');
+    sh.h('demo', '200px');
+    sh.w('demo', '300px');
 
     // Apply styles
     sh.styles('demo', {
