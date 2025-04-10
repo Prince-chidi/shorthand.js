@@ -11,13 +11,14 @@
 - 📏 Dimension management
 - 🛠️ Customizable shortcuts
 - 🛡️ Robust error handling
+- short one-liner codes
 
 ## Installation 📦
 ```html
 <script src="path/to/shorthand.js"></script>
 ```
 
-## API Reference 📚
+## Usage 📚
 
 ### Element Selection
 ```javascript
@@ -118,4 +119,4 @@ npm run build
 MIT License | *Currently in active development*
 ```
 
-*Replace placeholder links and images with actual project assets*
+
