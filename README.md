@@ -1,114 +1,189 @@
 ```markdown
-# shorthand.js ✨
+# ✨ Shorthand.js
 
-**A lightweight JavaScript library for simplified DOM manipulation and styling**
+**Shorthand.js** is a lightweight, open-source JavaScript library designed to simplify **DOM manipulation**, **styling**, and **long function calls** using concise and intuitive shorthand methods.
 
+---
 
-## Features 🌟
-- 🎯 Concise DOM selection
-- 🎨 Simplified element styling
-- 📝 Built-in logging utilities
-- 📏 Dimension management
-- 🛠️ Customizable shortcuts
-- 🛡️ Robust error handling
-- short one-liner codes
+## 🚀 Why Use Shorthand.js?
 
-## Installation 📦
+- ⏱️ Speeds up development  
+- ✍️ Reduces boilerplate code  
+- 🎯 Offers clear, readable, and reusable shorthand functions  
+- ⚙️ Adds robust error handling out of the box  
+
+Let’s build **Shorthand.js** together! If you're a JavaScript developer, contributions are welcome.
+
+---
+
+## 📦 Installation
+
+Include the script in your HTML file:
+
 ```html
-<script src="path/to/shorthand.js"></script>
+<script src="shorthand.js"></script>
 ```
 
-## Usage 📚
+> This exposes the `$$` and `sh` namespaces globally, along with `$`-prefixed shorthand styling methods.
 
-### Element Selection
+---
+
+## ✨ Features
+
+### 🔍 Element Selection
+
 ```javascript
-// Single element by ID
-const elem = sh.el('elementId');
+// Get element by ID
+const el = sh.el("myElementId");
 
-// Multiple elements by class
-const elems = sh._el('className');
+// Get elements by class name
+const els = sh._el("myClassName");
 ```
 
-### Styling Methods
-```javascript
-// Single style
-sh.style('elementId', 'property', 'value');
+---
 
-// Multiple styles
-sh.styles('elementId', {
-    bg: 'value',
-    cl: 'value',
-    fs: 'value'
+### 🖋️ Console Logging
+
+```javascript
+sh.log("This is a log message");
+sh.warn("This is a warning message");
+sh.err("This is an error message");
+```
+
+---
+
+### 🎨 Styling Elements
+
+#### ✅ Apply Single Style by ID
+
+```javascript
+sh.style("myElementId", "color", "blue");
+```
+
+#### 🎯 Apply Multiple Styles by ID
+
+```javascript
+sh.styles("myElementId", {
+  color: "blue",
+  backgroundColor: "lightgray",
+  fontSize: "16px"
 });
-
-// Background shortcut
-sh.bg('elementId', '#color');
 ```
 
-### Dimension Management
+#### 🌈 Background Color
+
 ```javascript
-sh.ht('elementId', '300px');  // Set height
-sh.wt('elementId', '50%');    // Set width
+sh.bg("myElementId", "yellow");
+sh._bg("myClassName", "lightblue");
 ```
 
-### Shorthand Mappings 🔤
-| Shortcut | Maps to          |
-|----------|------------------|
-| `bg`     | backgroundColor  |
-| `cl`     | color            |
-| `fs`     | fontSize         |
-| `bd`     | border           |
-| `h`      | height           |
-| `w`      | width            |
-| `pos`    | position         |
+#### 📏 Set Height and Width
 
-## Example Usage 🖥️
+```javascript
+sh.ht("myElementId", "100px");
+sh.wt("myElementId", "50%");
+```
+
+#### 💼 Apply Multiple Styles to Class
+
+```javascript
+sh._styles("myClassName", {
+  color: "red",
+  bgcl: "black",
+  fs: "14px"
+});
+```
+
+---
+
+### 💡 `$` Shorthand Methods
+
+Use globally or directly on HTML elements:
+
+```javascript
+// Global usage
+$bg(document.getElementById("myElement"), "yellow");
+
+// Directly on HTMLElement
+document.getElementById("myElement").$bg("yellow");
+```
+
+---
+
+### 🧩 Style Mapping (Abbreviations)
+
+```javascript
+sh.stylesMapping = {
+  bgcl: 'backgroundColor',
+  cl: 'color',
+  fs: 'fontSize',
+  bd: 'border',
+  h: 'height',
+  w: 'width',
+  pos: 'position'
+};
+```
+
+---
+
+## 🧪 Example
+
 ```html
-<div id="demo" class="box"></div>
-
+<div id="example" style="width: 100px; height: 100px;"></div>
+<script src="shorthand.js"></script>
 <script>
-    // Set dimensions
-    sh.h('demo', '200px');
-    sh.w('demo', '300px');
+  // Set background color
+  sh.bg("example", "blue");
 
-    // Apply styles
-    sh.styles('demo', {
-        bg: '#3498db',
-        cl: 'white',
-        bd: '2px solid #2980b9'
-    });
+  // Apply multiple styles
+  sh.styles("example", {
+    bgcl: "red",
+    h: "150px",
+    w: "150px"
+  });
 
-    // Prototype methods
-    sh.el('demo')
-        .$bg('#e74c3c')
-        .$cl('#fff')
-        .$fs('1.5rem');
+  // Log a message
+  sh.log("Styles applied successfully!");
 </script>
 ```
 
+---
 
+## 🛡️ Error Handling
+
+All methods come with built-in error handling:
+
+```javascript
+sh.style("nonexistentId", "color", "red");
+// Error: Element with ID 'nonexistentId' not found
 ```
 
-## Roadmap 🗺️
-- [x] Core DOM manipulation
-- [ ] Animation utilities
-- [ ] Event handling shortcuts
-- [ ] Plugin system
+---
 
-## Contributing 👥
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Open Pull Request
+## 🔮 Future Plans
 
-```bash
-# Development setup
-git clone https://github.com/Prince-chidi/shorthand.js.git
-npm install
-npm run build
+- Add advanced DOM manipulation utilities  
+- Improve event handling and animation support  
+- Release full documentation and licensing  
+
+---
+
+## 🤝 Contribute
+
+Have ideas? Feedback? PRs?  
+You're welcome to join in the development of **Shorthand.js** and help make it better.
+
+---
+
+## 📃 License
+
+Currently in development & testing phase.  
+License and policy will be added in future releases.
+
+---
+
+**Made with ❤️ by chidi prince.**
 ```
 
-## License 📄
-MIT License | *Currently in active development*
-```
+---
+
