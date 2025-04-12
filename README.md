@@ -181,5 +181,5 @@ License and policy will be added in future releases.
 
 ---
 
-**Made with ❤️ for devs who hate boilerplate.**
+**Made with ❤️ by chidi prince.**
 ```
